@@ -9,8 +9,10 @@ public class Gardener {
 		  tr1.attach(br1);
 		  br1.attach(br2);
 		  Leaf lf1 = new Leaf("121");
+		  Leaf lf2 = new Leaf("122");
 		  br2.attach(lf1);
 		  System.out.println(tr1.getName());
+		  lf1.attach(lf2);
 	}
 
 }
