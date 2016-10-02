@@ -5,13 +5,7 @@ public class Trunk extends Implementation {
  Collection<Implementation> attachedBranch = new ArrayList<Implementation>(); 
  
 public Trunk(String trunkName){
-	this.NameOfObject = trunkName;
-	System.out.println("A new Trunk " + trunkName);
- }
-
- public void attach(Implementation b){
-  this.attachedBranch.add(b);
-  System.out.println("Branch was attached to trunk\n");
- }
- 
+	this.setName(trunkName);
+	System.out.println("A new Trunk " + this.getName());
+ }; 
 }

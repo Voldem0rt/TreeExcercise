@@ -6,8 +6,6 @@ public abstract class Implementation implements Plants{
 	public void setName(String name){
 		this.NameOfObject = name;
 	};
-	
-	//enum attObj {Trunk, Branch, Leaf};
 	Collection<Plants> attachedObjects = new ArrayList<Plants>();
 	public void attach(Plants p) {
 		this.attachedObjects.add(p);
