@@ -6,4 +6,9 @@ public class Leaf extends Implementation {
 		System.out.println("A new leaf " + this.getName());
 		this.NameOfObject = leafName;
 	};
+	
+	public void attach(Plants p) {
+		System.out.println("Object can't be attached to leaf");
+		return;
+	};
 }

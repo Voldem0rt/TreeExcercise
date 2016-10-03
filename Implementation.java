@@ -7,9 +7,6 @@ public abstract class Implementation implements Plants{
 		this.NameOfObject = name;
 	};
 	Collection<Plants> attachedObjects = new ArrayList<Plants>();
-	public void attach(Plants p) {
-		this.attachedObjects.add(p);
- 		System.out.println("Object " + p.getName() + " was attached\n");
-	};
+	abstract public void attach(Plants p);
 	public String getName() {return this.NameOfObject;};
 }
