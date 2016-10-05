@@ -15,6 +15,7 @@ public class Gardener {
 		  System.out.println(tr1.getName());
 		  lf1.attach(lf2);
 		  tr1.attach(br1);
+		  tr1.attach(tr2);
 	}
 }
  
