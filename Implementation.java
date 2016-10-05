@@ -17,7 +17,7 @@ public abstract class Implementation implements Plants{
     abstract protected Collection<Class<? extends Plants>> getAttachables();
 	
 	public void attach(Plants plant) {
-		if ( getAttachables().contains(Plants.class) ) {
+		if ( getAttachables().contains(plant.getClass()) ) {
 			this.attachedObjects.add(plant);
 			System.out.println("Object " + plant.getName() + " was attached");
 		}
