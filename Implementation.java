@@ -10,15 +10,14 @@ public abstract class Implementation implements Plants{
 	public String getName() {return this.NameOfObject;};
 	
 	Collection<Plants> attachedObjects = new ArrayList<Plants>();
-	//Collection<Class<? extends Plants>> possibleTypes = new HashSet<Class<? extends Plants>>(); 
+	Collection<Class<? extends Plants>> possibleTypes;
 	
-	// method which returns true if object cauld be attached and returns false otherwise
+	// method which returns true if object could be attached and returns false otherwise
 
-    abstract protected boolean isAttachable(Plants plant);
+    abstract protected Collection<Class<? extends Plants>> getAttachables();
 	
 	public void attach(Plants plant) {
-		/*if( possibleTypes.contains(Plants.class))*/
-		if (isAttachable(plant)) {
+		if ( getAttachables().contains(Plants.class) ) {
 			this.attachedObjects.add(plant);
 			System.out.println("Object " + plant.getName() + " was attached");
 		}
