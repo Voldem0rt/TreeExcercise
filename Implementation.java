@@ -13,11 +13,15 @@ public abstract class Implementation implements Plants{
 	Collection<Class<? extends Plants>> possibleTypes;
 	
 	// method which returns true if object could be attached and returns false otherwise
-
-    abstract protected Collection<Class<? extends Plants>> getAttachables();
+    abstract protected boolean isAttachable(Plants plant);
 	
+    // check that object is not attached yet
+    public boolean isAttached(Plants plant) {
+    	return attachedObjects.contains(plant);
+    };
+    
 	public void attach(Plants plant) {
-		if ( getAttachables().contains(plant.getClass()) ) {
+		if ( isAttachable(plant) & !isAttached(plant) ) {
 			this.attachedObjects.add(plant);
 			System.out.println("Object " + plant.getName() + " was attached");
 		}

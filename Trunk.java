@@ -8,7 +8,7 @@ public class Trunk extends Implementation {
 		System.out.println("A new Trunk " + this.getName());
 	}; 
  
-	protected Collection<Class<? extends Plants>> getAttachables() {
-		return this.possibleTypes;
+	protected boolean isAttachable(Plants plant) {
+		return plant instanceof Branch;
 	};
 }

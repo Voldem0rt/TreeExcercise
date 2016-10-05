@@ -14,6 +14,10 @@ public class Gardener {
 		  lf1.attach(lf2);
 		  tr1.attach(br1);
 		  tr1.attach(tr2);
+		  Plants apl1 = new Apple("aplochko");
+		  apl1.attach(lf1);
+		  br1.attach(apl1);
+		  br2.attach(apl1);
 	}
 }
  
