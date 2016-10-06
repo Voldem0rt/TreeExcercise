@@ -22,10 +22,15 @@ public abstract class Implementation implements Plants{
     
 	public void attach(Plants plant) {
 		if ( isAttachable(plant) & !isAttached(plant) ) {
-			this.attachedObjects.add(plant);
+			attachedObjects.add(plant);
 			System.out.println("Object " + plant.getName() + " was attached");
 		}
 		else 
 			System.out.println("Object " + plant.getName() + " couldn't be attached");
+		System.out.println("Attached objects: ");
+		for( Plants x : attachedObjects ) {
+			  System.out.println(x);
+		 }
+		System.out.println("\n end");
 	};
 }
