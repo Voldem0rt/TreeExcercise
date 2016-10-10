@@ -2,7 +2,10 @@ import java.util.*;
 
 public abstract class Implementation implements Plants{
 	protected String NameOfObject;
-	
+	protected boolean attached = false;
+	protected boolean isAttached(){
+		return this.attached;
+	};
 	public void setName(String name){
 		this.NameOfObject = name;
 	};
@@ -16,12 +19,12 @@ public abstract class Implementation implements Plants{
     abstract protected boolean isAttachable(Plants plant);
 	    
     public void attach(Plants plant) {
-		if ( isAttachable(plant) ) {
+		if ( isAttachable(plant) && !(this.isAttached()) ) {
 			attachedObjects.add(plant);
 			System.out.println("Object " + plant.getName() + " was attached");
+			this.attached = true;
 		}
 		else 
 			System.out.println("Object " + plant.getName() + " couldn't be attached");
-		System.out.println("Attached objects: ");
 	};
 }

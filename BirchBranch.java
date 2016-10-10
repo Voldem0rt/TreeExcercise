@@ -6,6 +6,6 @@ public class BirchBranch extends Branch {
 	};
 	
 	protected boolean isAttachable(Plants plant) {
-		return (plant instanceof Branch) || plant instanceof Leaf || plant instanceof Fruits;
+		return (plant instanceof Branch) || (plant instanceof Leaf) || (plant instanceof Fruits);
 	};
 }
