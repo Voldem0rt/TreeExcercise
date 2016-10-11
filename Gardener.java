@@ -10,7 +10,7 @@ public class Gardener {
 		  br1.attach(tr1);
 		  Plants lf1 = new Leaf("lf1");
 		  Plants lf2 = new Leaf("lf2");
-		  br2.attach(lf1);
+		  br1.attach(lf1);
 		  lf1.attach(lf2);
 		  tr1.attach(br1);
 		  tr1.attach(tr2);
