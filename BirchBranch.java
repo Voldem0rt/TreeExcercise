@@ -14,10 +14,6 @@ public class BirchBranch extends Branch {
 		return this.attached;
 		}
 	
-	public void setAttached(boolean attached) {
-		this.attached = attached;
-	}
-	
 	protected boolean isCompatibleWith(Plants plant) {
 		return (plant instanceof Branch) || (plant instanceof Leaf) || (plant instanceof Fruits);
 	};

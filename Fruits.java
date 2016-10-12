@@ -1,8 +1,3 @@
 
-public abstract class Fruits extends AbstractPlant {
-	@Override
-	public void setAttached(boolean attached) {
-		this.attached = false;
-	}
-}
+public abstract class Fruits extends AbstractPlant {}
 	

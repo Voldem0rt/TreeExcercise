@@ -13,10 +13,6 @@ public class Trunk extends AbstractPlant {
 		return this.attached;
 		}
 	
-	public void setAttached(boolean attached) {
-		this.attached = attached;
-	}
-	
 	protected boolean isCompatibleWith(Plants plant) {
 		return plant instanceof Branch;
 	};

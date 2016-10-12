@@ -18,6 +18,10 @@ public abstract class AbstractPlant implements Plants{
 	// method which returns true if object could be attached and returns false otherwise
     abstract protected boolean isCompatibleWith(Plants plant);
 	    
+    public void setAttached(boolean attached) {
+		this.attached = attached;
+	};
+    
     public void attach(Plants plant) {
 		if ( isCompatibleWith(plant) & !(plant.isAttached()) ) {
 			plant.setAttached(true);

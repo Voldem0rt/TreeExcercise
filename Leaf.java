@@ -10,11 +10,7 @@ public class Leaf extends AbstractPlant {
 	public boolean isAttached() {
 		return this.attached;
 		}
-	
-	public void setAttached(boolean attached) {
-		this.attached = attached;
-	}
-	
+		
 	protected boolean isCompatibleWith(Plants plant) {
 		return false;
 	};
