@@ -1,23 +1,23 @@
 import java.util.*;
 
-public class Trunk extends Implementation {
+public class Trunk extends AbstractPlant {
 
 	public Trunk(String trunkName){
 		this.attached = false;
-		possibleTypes =	new ArrayList<Class<? extends Plants>>(Arrays.asList(Branch .class));
-		this.setName(trunkName);
-		System.out.println("A new Trunk " + this.getName());
+		attachablePlants =	new ArrayList<Class<? extends Plants>>(Arrays.asList(Branch .class));
+		this.setPlantName(trunkName);
+		System.out.println("A new Trunk " + this.getPlantName());
 	}; 
 	
 	public boolean isAttached() {
 		return this.attached;
 		}
 	
-	public void setAttachState(boolean attachState) {
-		this.attached = attachState;
+	public void setAttached(boolean attached) {
+		this.attached = attached;
 	}
 	
-	protected boolean isAttachable(Plants plant) {
+	protected boolean isCompatibleWith(Plants plant) {
 		return plant instanceof Branch;
 	};
 }

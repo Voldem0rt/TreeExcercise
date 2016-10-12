@@ -1,20 +1,20 @@
 
 public class Apple extends Fruits {
 	public Apple(String fruitName) {
-		this.setName(fruitName);
-		System.out.println("A new Apple " + this.getName());
-		this.NameOfObject = fruitName;
+		this.setPlantName(fruitName);
+		System.out.println("A new Apple " + this.getPlantName());
+		this.plantName = fruitName;
 	};
 	
 	public boolean isAttached() {
 		return this.attached;
 		}
 	
-	public void setAttachState(boolean attachState) {
-		this.attached = attachState;
+	public void setAttached(boolean attached) {
+		this.attached = attached;
 	}
 	
-	protected boolean isAttachable(Plants plant){
+	protected boolean isCompatibleWith(Plants plant){
 		return false;
 	};
 }

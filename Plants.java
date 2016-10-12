@@ -1,10 +1,10 @@
 
 public interface Plants {
-	abstract public boolean isAttached();
-	abstract public void setAttachState(boolean attachState);
+	public boolean isAttached();
+	public void setAttached(boolean attached);
 	void attach(Plants plant);
-	String getName();
-	void setName(String name);
+	String getPlantName();
+	void setPlantName(String name);
 }
 
 

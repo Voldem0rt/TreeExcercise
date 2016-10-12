@@ -1,21 +1,21 @@
 
-public class Leaf extends Implementation {
+public class Leaf extends AbstractPlant {
 	public Leaf(String leafName){
 		this.attached = false;
-		this.setName(leafName);
-		System.out.println("A new leaf " + this.getName());
-		this.NameOfObject = leafName;
+		this.setPlantName(leafName);
+		System.out.println("A new leaf " + this.getPlantName());
+		this.plantName = leafName;
 	};
 
 	public boolean isAttached() {
 		return this.attached;
 		}
 	
-	public void setAttachState(boolean attachState) {
-		this.attached = attachState;
+	public void setAttached(boolean attached) {
+		this.attached = attached;
 	}
 	
-	protected boolean isAttachable(Plants plant) {
+	protected boolean isCompatibleWith(Plants plant) {
 		return false;
 	};
 }

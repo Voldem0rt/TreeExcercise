@@ -1,7 +1,7 @@
 
-public abstract class Fruits extends Implementation {
+public abstract class Fruits extends AbstractPlant {
 	@Override
-	public void setAttachState(boolean attachState) {
+	public void setAttached(boolean attached) {
 		this.attached = false;
 	}
 }

@@ -1,6 +1,6 @@
 
-abstract public class Branch extends Implementation {
-	public void setAttachState(boolean attachState) {
+abstract public class Branch extends AbstractPlant {
+	public void setAttached(boolean attached) {
 		this.attached = false;
 	}
 }
