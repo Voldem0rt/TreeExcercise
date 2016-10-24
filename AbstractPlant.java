@@ -12,14 +12,18 @@ public abstract class AbstractPlant implements Plants{
 	
 	Collection<Plants> attachedObjects = new HashSet<Plants>();
 	
-	public void showAttachedObj() {
-		for(Plants p : attachedObjects) {
-		    System.out.println( p.getPlantName());
-		    if( !attachedObjects.isEmpty() ) 
-		    	System.out.println( p.getPlantName());
+	public Collection<Plants> getChildren() {
+		return this.attachedObjects;
+	};
+			
+	public void showObjectsTree() {
+		for (Plants p : this.getChildren()) {
+			if(this instanceof Trunk)
+				System.out.println("___" + this.getPlantName());
+		    System.out.println( "___" + p.getPlantName());
+		    p.showObjectsTree();
 		}
 	};
-	
 	
 	Collection<Class<? extends Plants>> attachablePlants;
 		

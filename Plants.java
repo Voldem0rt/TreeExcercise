@@ -1,3 +1,4 @@
+import java.util.*;
 
 public interface Plants {
 	public boolean isAttached();
@@ -5,7 +6,8 @@ public interface Plants {
 	void attach(Plants plant);
 	String getPlantName();
 	void setPlantName(String name);
-	public void showAttachedObj();
+	public Collection<Plants> getChildren();
+	public void showObjectsTree();
 }
 
 
