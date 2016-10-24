@@ -1,8 +1,8 @@
 
 public class Apple extends Fruits {
 	public Apple(String fruitName) {
+		this.setPlantName(fruitName);
 		System.out.println("A new Apple " + this.getPlantName());
-		this.plantName = fruitName;
 	};
 	
 	public boolean isAttached() {

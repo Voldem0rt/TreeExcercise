@@ -5,6 +5,7 @@ public interface Plants {
 	void attach(Plants plant);
 	String getPlantName();
 	void setPlantName(String name);
+	public void showAttachedObj();
 }
 
 

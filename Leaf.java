@@ -4,7 +4,6 @@ public class Leaf extends AbstractPlant {
 		this.attached = false;
 		this.setPlantName(leafName);
 		System.out.println("A new leaf " + this.getPlantName());
-		this.plantName = leafName;
 	};
 
 	public boolean isAttached() {
