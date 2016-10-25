@@ -25,6 +25,18 @@ public abstract class AbstractPlant implements Plants{
 		}
 	};
 	
+	public void rustle() {
+		for (Plants p : this.getChildren()) {
+			if(p instanceof BirchLeaf) {
+				System.out.println( p.getPlantName() + " Biiiiiirshhh");
+			}
+			if(p instanceof BirchLeaf) {
+				System.out.println( p.getPlantName() + " Apppleshhhhh");
+			}
+		    p.rustle();  
+		}
+	};
+	
 	Collection<Class<? extends Plants>> attachablePlants;
 		
 	// method which returns true if object could be attached and returns false otherwise

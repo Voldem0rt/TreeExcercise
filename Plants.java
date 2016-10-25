@@ -8,6 +8,7 @@ public interface Plants {
 	void setPlantName(String name);
 	public Collection<Plants> getChildren();
 	public void showObjectsTree();
+	public void rustle();
 }
 
 

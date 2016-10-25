@@ -1,16 +1,10 @@
 
-public class Leaf extends AbstractPlant {
-	public Leaf(String leafName){
-		this.attached = false;
-		this.setPlantName(leafName);
-		System.out.println("A new leaf " + this.getPlantName());
-	};
-
-	public boolean isAttached() {
-		return this.attached;
-		}
-		
+abstract public class Leaf extends AbstractPlant {
 	protected boolean isCompatibleWith(Plants plant) {
 		return false;
 	};
+	
+	public boolean isAttached() {
+		return this.attached;
+	}	
 }

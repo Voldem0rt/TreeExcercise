@@ -9,14 +9,4 @@ public class BirchBranch extends Branch {
 		this.setPlantName(branchName);
 		System.out.println("A new BirchBranch " + this.getPlantName());
 	};
-
-	public boolean isAttached() {
-		return this.attached;
-		}
-	
-	protected boolean isCompatibleWith(Plants plant) {
-		return (plant instanceof Branch) || (plant instanceof Leaf) || (plant instanceof Fruits);
-	};
-	
-
 }
