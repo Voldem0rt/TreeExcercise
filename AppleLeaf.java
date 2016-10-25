@@ -5,4 +5,8 @@ public class AppleLeaf extends Leaf {
 		this.setPlantName(leafName);
 		System.out.println("A new leaf " + this.getPlantName());
 	};
+	
+	public void rustle() {
+				System.out.println( this.getPlantName() + " Biiiiiirshhh");
+	};
 }

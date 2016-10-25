@@ -4,9 +4,11 @@ abstract public class Branch extends AbstractPlant {
 		return (plant instanceof Branch) || (plant instanceof Leaf) || (plant instanceof Fruits);
 	};
 	
-	public boolean isAttached() {
-		return this.attached;
-	}
+	public void rustle() {
+		for (Plants p : this.getChildren()) {
+				p.rustle();
+		} 
+	};
 }
 
 

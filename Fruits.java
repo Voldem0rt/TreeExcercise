@@ -1,3 +1,5 @@
 
-public abstract class Fruits extends AbstractPlant {}
+public abstract class Fruits extends AbstractPlant {
+	public void rustle() {}
+}
 	

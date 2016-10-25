@@ -18,24 +18,18 @@ public abstract class AbstractPlant implements Plants{
 			
 	public void showObjectsTree() {
 		for (Plants p : this.getChildren()) {
-			if(this instanceof Trunk)
-				System.out.println("___" + this.getPlantName());
 		    System.out.println( "___" + p.getPlantName());
 		    p.showObjectsTree();
 		}
 	};
 	
-	public void rustle() {
-		for (Plants p : this.getChildren()) {
-			if(p instanceof BirchLeaf) {
-				System.out.println( p.getPlantName() + " Biiiiiirshhh");
-			}
-			if(p instanceof BirchLeaf) {
-				System.out.println( p.getPlantName() + " Apppleshhhhh");
-			}
-		    p.rustle();  
-		}
-	};
+	abstract public void rustle();
+
+	
+	
+	public boolean isAttached() {
+		return this.attached;
+	}
 	
 	Collection<Class<? extends Plants>> attachablePlants;
 		

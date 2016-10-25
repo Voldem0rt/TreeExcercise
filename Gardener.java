@@ -19,7 +19,7 @@ public class Gardener {
 		  br3.attach(br4);
 		  br4.attach(lf2);
 		  br4.attach(apl3);
-		  //tr1.showObjectsTree();
+		  tr1.showObjectsTree();
 		 tr1.rustle();
 	}
 }

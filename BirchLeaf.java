@@ -5,8 +5,8 @@ public class BirchLeaf extends Leaf {
 		this.setPlantName(leafName);
 		System.out.println("A new leaf " + this.getPlantName());
 	};
-
-	public boolean isAttached() {
-		return this.attached;
-		}
+	
+	public void rustle() {
+				System.out.println( this.getPlantName() + " Apppleshhh"); 
+	};
 }
